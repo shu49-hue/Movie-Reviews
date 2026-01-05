@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+main {
+  min-height: 100vh;
+  background-image: url('/BG.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.wrapper {
+  text-align: center;
+  max-width: 900px;
+  padding: 2rem;
+}
+
+header h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  color: white;
+}
+
+.text-gradient {
+  background: linear-gradient(270deg, #ff6a00, #ee0979, #00c6ff);
+  background-size: 400% 400%;
+  animation: gradientMove 5s ease infinite;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+
+  filter: drop-shadow(0 0 20px rgba(0, 198, 255, 0.35));
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-image {
+  max-width: 420px;
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  color: white;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.error-message {
+  color: #ff6b6b;
+}
+.loading-message {
+  color: #00c6ff;
+}
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+.movie-card {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.25s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-6px);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+}
+
+.movie-card h3 {
+  font-size: 0.95rem;
+  padding: 0.5rem;
+}
+
+.movie-card p {
+  padding: 0 0.5rem 0.75rem;
+  opacity: 0.8;
+}
+.movie-card p span {
+  font-weight: 600;
+  color: #00c6ff;
+}
+.movies-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+.movies-section h2 {
+  margin-bottom: 1.5rem;
+}
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 180px));
+  gap: 1.5rem;
+  justify-content: center;
+}
+.movie-card {
+  backdrop-filter: blur(6px);
+  box-shadow: 0 10px 30px rgba(62, 27, 139, 0.499);
+}
